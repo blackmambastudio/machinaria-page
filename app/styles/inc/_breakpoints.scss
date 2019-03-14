@@ -1,0 +1,11 @@
+$mobile: 300px;
+$tablet: 600px;
+$desktop: 1000px;
+$large-desktop: 1440px;
+
+$breakpoints: (
+  'mobile': $mobile,
+  'tablet': $tablet,
+  'desktop': $desktop,
+  'large-desktop': $large-desktop
+);

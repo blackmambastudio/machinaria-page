@@ -1,3 +1,9 @@
-body {
-  background-color: #5527aa;
-}
+// Inc
+@import './inc/_colors';
+@import './inc/_breakpoints';
+@import './inc/_mixins';
+
+// Modules
+@import './modules/_animations';
+@import './modules/_index';
+@import './modules/_tv';
