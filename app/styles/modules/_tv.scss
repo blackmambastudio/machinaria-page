@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=VT323);
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
 .tv {
   margin: 0;
@@ -21,11 +21,25 @@
   }
 
   &__screen {
-    background-color: $black;
-    border: 4px solid $electric-violet;
-    border-radius: 10px;
+    animation: crt 10ms infinite;
+    // background-color: $melanzane;
+    background-color: $cherry-pie;
+    // border: 4px solid $electric-violet;
+    border: 1rem solid;
+    border-bottom-color: #020202;
+    border-left-color: #080808;
+    // border-radius: 10px;
+    border-radius: 2rem;
+    border-right-color: #080808;
+    border-top-color: #020202;
+    box-shadow: inset 0 0 18rem black, inset 0 0 3rem black, 0 0 10rem black;
     overflow: hidden;
     position: relative;
+    // pointer-events: auto;
+    pointer-events: none;
+    text-shadow: 0rem 0.2rem 1rem $electric-violet;
+    z-index: -1;
+
 
     @include from('tablet') {
       border-radius: 10px;
@@ -33,6 +47,15 @@
       height: 400px;
       width: 600px;
     }
+  }
+
+  &__glass {
+    background: linear-gradient( to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.6) );
+    border-radius: 2rem;
+    background-size: 100% 0.3rem;
+    height: 100%;
+    position: absolute;
+    width: 100%;
   }
 
   &__speaker {
@@ -96,7 +119,7 @@
     cursor: pointer;
     display: none;
     font-size: 60px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'VT323';
     font-weight: 700;
     line-height: 1;
     margin: auto;

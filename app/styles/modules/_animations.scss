@@ -1,4 +1,16 @@
-// Glitch text animation
+
+// CRT effect
+@keyframes crt {
+  0% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+// Glitching text
 @keyframes glitch {
   0% {
     transform: translate(0);
