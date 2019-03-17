@@ -1,4 +1,6 @@
 .tv {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 
@@ -8,22 +10,25 @@
 
   &__screen {
     background-color: $black;
-    border: 1px solid $aqua;
+    border: 1px solid $electric-violet;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 
     @include from('tablet') {
       border-radius: 10px;
+      display: inline-block;
       height: 400px;
-      margin: auto;
       width: 600px;
     }
   }
 
   &__controls {
-    margin: auto;
-    width: 600px;
+    display: inline-block;
+
+    @include from('mobile') {
+      width: 130px;
+    }
   }
 
   &__buttons {
@@ -33,13 +38,13 @@
   &__button {
     background-color: transparent;
     cursor: pointer;
-    margin: 0 5px;
-    border: none;
-    color: $green;
+    margin: 5px;
+    border: 1px solid $electric-violet;
+    border-radius: 4px;
+    color: $electric-violet;
     outline: none;
 
     &:focus {
-      border: none;
     }
   }
 
@@ -82,9 +87,15 @@
     }
   }
 
-  &__channel--one {
+  &__channel--zero {
     .title {
       @include content('MACHINARIA TV');
+    }
+  }
+
+  &__channel--one {
+    .title {
+      @include content('BLACK MAMBA STUDIO');
     }
   }
 
@@ -103,6 +114,36 @@
   &__channel--four {
     .title {
       @include content('FEAR');
+    }
+  }
+
+  &__channel--five {
+    .title {
+      @include content('5');
+    }
+  }
+
+  &__channel--six {
+    .title {
+      @include content('6');
+    }
+  }
+
+  &__channel--seven {
+    .title {
+      @include content('7');
+    }
+  }
+
+  &__channel--eight {
+    .title {
+      @include content('8');
+    }
+  }
+
+  &__channel--nine {
+    .title {
+      @include content('9');
     }
   }
 }
