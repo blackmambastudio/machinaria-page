@@ -21,16 +21,42 @@ class Television {
 
   init() {
     window.cosito = this;
-    // Add event handlers
-    this.buttons.forEach(element => {
-      element.addEventListener('click', () => {
-        this.setChannel(element.dataset.channel);
-      });
+    // Add key event handlers
+    document.addEventListener('keyup', (event) => {
+      this.handleKey(event.keyCode)
     });
+    
+    // this.buttons.forEach(element => {
+    //   element.addEventListener('click', () => {
+    //     this.setChannel(element.dataset.channel);
+    //   });
+    // });
+  }
+
+  handleKey(key) {
+    if (key === 67) {
+      // c
+      this.setChannel(1);
+    } else if (key === 77) {
+      // m
+      this.setChannel(this.currentChannel + 1);
+    } else if (key === 66) {
+      // b
+      this.setChannel(this.currentChannel - 1);
+      
+    } else if (key === 82) {
+      // r
+      this.setChannel(0);
+    } else {
+      // Do nothing
+    }
+  
   }
 
   setChannel(channel) {
-    console.log(channel);
+    if (channel === this.channels.length) {
+      channel = 0;
+    }
     // Hide current active channel
     this.channels[this.currentChannel].classList.remove(CLASSNAMES.active);
 
