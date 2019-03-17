@@ -59,6 +59,7 @@
   }
 
   &__speaker {
+    display: none;
     border-radius: 50%;
     border: 1px solid $electric-violet;
     height: 100px;
@@ -66,7 +67,7 @@
   }
 
   &__controls {
-    display: block;
+    display: none;
 
     @include from('desktop') {
       width: 200px;
@@ -137,14 +138,31 @@
   }
 
   &__channel--zero {
+    flex-flow: column;
+    justify-content: center;
+
     .title {
+      margin: 0;
+
       @include content('MACHINARIA TV');
+    }
+
+    .coin {
+      animation: blink 1s steps(4, start) infinite;
+      color: $white;
+      font-family: 'VT323';
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: 5px;
+      text-shadow: -2px 0 0 #fdff2a,
+        -4px 0 0 #df4a42,
+        2px 0 0 #91fcfe,
+        4px 0 0 #4405fc;
     }
   }
 
   &__channel--one {
-    .title {
-    }
+    // TODO
   }
 
   &__channel--two {

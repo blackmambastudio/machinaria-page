@@ -1,3 +1,13 @@
+// Blink
+@keyframes blink {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
 
 // CRT effect
 @keyframes crt {
