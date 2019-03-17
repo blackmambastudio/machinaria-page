@@ -20,6 +20,7 @@ class Television {
   }
 
   init() {
+    window.cosito = this;
     // Add event handlers
     this.buttons.forEach(element => {
       element.addEventListener('click', () => {
@@ -29,6 +30,7 @@ class Television {
   }
 
   setChannel(channel) {
+    console.log(channel);
     // Hide current active channel
     this.channels[this.currentChannel].classList.remove(CLASSNAMES.active);
 

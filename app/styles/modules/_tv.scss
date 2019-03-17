@@ -1,11 +1,21 @@
 .tv {
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
 
   @include from('tablet') {
     padding: 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 900px;
+  }
+
+  .col {
+    display: inline-block;
+    padding: 0 20px;
   }
 
   &__screen {
@@ -17,16 +27,23 @@
 
     @include from('tablet') {
       border-radius: 10px;
-      display: inline-block;
+      display: block;
       height: 400px;
       width: 600px;
     }
   }
 
-  &__controls {
-    display: inline-block;
+  &__speaker {
+    border-radius: 50%;
+    border: 1px solid $electric-violet;
+    height: 100px;
+    width: 100px;
+  }
 
-    @include from('mobile') {
+  &__controls {
+    display: block;
+
+    @include from('desktop') {
       width: 130px;
     }
   }
@@ -43,9 +60,6 @@
     border-radius: 4px;
     color: $electric-violet;
     outline: none;
-
-    &:focus {
-    }
   }
 
   // Channels
