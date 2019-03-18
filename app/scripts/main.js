@@ -36,8 +36,8 @@ class Television {
   handleKey(key) {
     if (key === 13) {
       // ENTER
-      this.setChannel(1);
-    } else if (key === 77) {
+      this.setChannel(this.currentChannel + 1);
+    } else if (key === 13) {
       // m
       this.setChannel(this.currentChannel + 1);
     } else if (key === 66) {
